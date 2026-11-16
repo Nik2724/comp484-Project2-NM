@@ -1,82 +1,85 @@
 
 * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: helvetica, arial, sans-serif;
-    margin: 25px;
-  }
-  
-  main {
-    display:block;
-    height:175px;
-  }
-  
-  header {
-    border-bottom: 1px solid black;
-  }
-  
-  h1 {
-    font-weight: bold;
-    color: #000;
-  }
-  
-  .bold {
-    font-weight: bold;
-  }
-  
-  p {
-    max-width: 600px;
-  }
-  
-  
-  li {
-    margin-bottom: 5px;
-  }
-  
-  footer {
-    padding-top: 25px;
-    border-top: 1px solid black;
-  }
-  
-  footer a {
-    float:left;
-    margin:5px;
-  }
-  
-  .pet-image {
-    height:250px;
-  }
-  
-  .dashboard div {
-    display:block;
-  }
-  
-  .pet-image-container {
-    float:left;
-    padding:10px;
-  }
-  
-  .dashboard {
-    float:left;
-    padding:20px;
-  }
-  
-  .button-container {
-    margin-top:20px;
-  }
-  
-  .button-container button {
-    width: 100px;
-      margin-right: 10px;
-      text-align: center;
-      display: inline-block;
-      float: left;
-    font-size:15px;
-    background-color: #1e2835;
-    border-color: #404853;
-    cursor:pointer;
-    background-image: linear-gradient(to bottom,rgba(246,246,246,.1)0%,rgba(30,40,53,0)66%);
-    color: #fafafa;
-  }
+  box-sizing: border-box;
+}
+ 
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 25px;
+}
+ 
+main {
+  display: block;
+  overflow: hidden;
+}
+ 
+header {
+  border-bottom: 1px solid black;
+}
+ 
+h1 {
+  font-weight: bold;
+  color: #000;
+}
+ 
+.pet-image {
+  height: 250px;
+  max-width: 100%;
+}
+ 
+.dashboard div {
+  display: block;
+}
+ 
+.pet-image-container {
+  float: left;
+  padding: 10px;
+}
+ 
+.dashboard {
+  float: left;
+  padding: 20px;
+  max-width: 480px;
+}
+ 
+.stats {
+  margin-top: 4px;
+}
+ 
+.button-container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+ 
+.button-container button {
+  width: 100px;
+  text-align: center;
+  font-size: 15px;
+  padding: 6px 0;
+  background-color: #1e2835;
+  border-color: #404853;
+  cursor: pointer;
+  background-image: linear-gradient(to bottom, rgba(246,246,246,.1) 0%, rgba(30,40,53,0) 66%);
+  color: #fafafa;
+}
+ 
+/* siblings() color match */
+.button-container button.active {
+  background-color: #2f7d4f;
+  border-color: #1d5a37;
+}
+ 
+/* Speech-bubble notification (hidden until a button is pressed) */
+.pet-message {
+  display: none;
+  clear: both;
+  margin-top: 12px;
+  padding: 10px 14px;
+  background: #fffbe6;
+  border: 2px solid #e0c35a;
+  border-radius: 14px;
+  font-style: italic;
+}
+ 
